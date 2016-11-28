@@ -200,31 +200,6 @@
 				<path id="map_180" vector-effect="non-scaling-stroke" fill="#EBECED" d="M529.725,358.894c3.077,8.277,10.071,15.152,12.31,15.705c3.003,0.742,4.951,3.132,6.368,1.167c14.324-19.844-1.083-22.804-1.911-24.406C538.107,348.92,543.308,360.697,529.725,358.894z"/>
 			</g><!--countries-->
 			<g id="map_points"></g>
-			
-			 func_interactive_map(selection_type) 
-      {
-          countries_list = func_get_countries(selection_type) 
-          for country in countries_list
-          loop
-                 language = func_determine_major_language(country)
-                 apply_color(country,language)
-                 apply_language_tag(country,language)
-          end loop
-       }
-
-    selection_type will be ALL (on page load) , languages such as ENGLISH , SPANISH , MANDARIN , HINDI etc. 
-    func_get_countries : will take the selection type ALL  / ENGLISH / SPANISH  etc and based on it you will determine the list . This list would be an array.
-    func_determine_major_language : input is country name and determine the languages spoken and majority
-    apply_color : input is country , language and determines the color for map
-    apply_language_tag : input is country , language and determines the language tag in circles
-
-
-      func_click_country(country , event_type) 
-      {
-          language_list = func_get_country_language(country);
-          language = func_determine_major_language(country)
-          apply_color(country,language)          
-       }
 		</svg>
 	</div>
 </div>
